@@ -1,0 +1,65 @@
+{% extends "base.html" %} {% block content %}
+
+<h2><center>Potato Plant</center></h2>
+<br><br>
+<div class="container">
+    <div class="row">
+    <div class="col-md-4">
+        
+        <form id="upload-file" method="post" enctype="multipart/form-data">
+            <label for="imageUpload" class="upload-label">
+                Upload Image
+            </label>
+            <br>
+            <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+        </form>
+
+        <div class="image-section" style="display:none;">
+            <div class="img-preview">
+                <div id="imagePreview">
+                </div>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
+            </div>
+        </div>
+
+        <div class="loader" style="display:none;"></div>
+
+        <h3 id="result">
+            <span> </span>
+            
+        </h3>
+            
+    </div>
+    <div class="col-md-8">
+        
+            <!-- <h2 id="symptoms"><span></span></h2> -->
+            <div id="lateb">
+                <center><h3>Late Blight</h3></center>
+                <h4>Symptoms</h4>
+                <p>Irregularly shaped spreading brown lesions on leaves with distinctive white fluffy sporulation at lesion margins on the underside of the leaf in wet conditions. In dry condition the lesions dry up and go dark brown with collapsed tissue; water-soaked dark green to brown lesions on stems also with characteristic white sporulation; later in infection leaves and petioles completely rotted; severely affected plants may have an slightly sweet distinctive odor; red-brown firm lesions on tubers extending several centimeters into tissue; lesions may be slightly sunken in appearance and often lead to secondary bacterial rots.</p>
+                <h4>Cause</h4>
+                <p>Fungus</p>
+                <h4>Management</h4>
+                <p>Control depends on a multifaceted approach with importance of certain practices changing based on geographic location: destroy infected tubers; destroy any volunteer plants; application of appropriate fungicide to potato hills at emergence; time watering to reduce periods of leaf wetness e.g. water early to allow plant to dry off during the day; plant resistant varieties; apply appropriate protective fungicide if disease is forecast in area.</p>
+            </div>
+            <div id="earlyb">
+                <center><h3>Early Blight</h3></center>
+                <h4>Symptoms</h4>
+                <p>Dark lesions with yellow border which may form concentric rings of raised and sunken tissue on the leaves and stems; lesions initially circular but become angular; leaves become necrotic but remain attached to plant; dark, dry lesions on tubers with leathery or corky texture and watery yellow0green margins.</p>
+                <h4>Cause</h4>
+                <p>Fungus</p>
+                <h4>Management</h4>
+                <p>Application of appropriate protective fungicide can reduce severity of foliar symptoms; reduce stress to plants by fertilizing and watering adequately; plant late varieties which are less susceptible to disease; store tubers in cool environment.</p>
+            </div>
+            <div id="healthy">
+                <h4>Your plant is HEALTHY</h4>
+                <p>Keep it up!</p>
+            </div>
+        
+    </div>
+    </div>
+</div>
+
+{% endblock %}

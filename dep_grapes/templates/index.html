@@ -1,0 +1,74 @@
+{% extends "base.html" %} {% block content %}
+
+<h2><center>Grape Plant</center></h2>
+<br><br>
+<div class="container">
+    <div class="row">
+    <div class="col-md-4">
+        
+        <form id="upload-file" method="post" enctype="multipart/form-data">
+            <label for="imageUpload" class="upload-label">
+                Upload Image
+            </label>
+            <br>
+            <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+        </form>
+
+        <div class="image-section" style="display:none;">
+            <div class="img-preview">
+                <div id="imagePreview">
+                </div>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
+            </div>
+        </div>
+
+        <div class="loader" style="display:none;"></div>
+
+        <h3 id="result">
+            <span> </span>
+            
+        </h3>
+            
+    </div>
+    <div class="col-md-8">
+        
+            <!-- <h2 id="symptoms"><span></span></h2> -->
+            <div id="blackrot">
+                <center><h3>Black Rot</h3></center>
+                <h4>Symptoms</h4>
+                <p>Brown lesions on the leaves that develop black dots (pycnidia); grapes have light spots that eventually form pycnidia; grapes harden and turn black, while still remaining on the vine.</p>
+                <h4>Cause</h4>
+                <p>Fungus</p>
+                <h4>Management</h4>
+                <p>Remove all mummified fruit from vines during dormant pruning; cultivate soil during bud break to bury mummies and reduce inoculant; application of appropriate fungicides can help control the disease.</p>
+            </div>
+            <div id="measles">
+                <center><h3>Black Measles</h3></center>
+                <h4>Symptoms</h4>
+                <p>Symptom appears on leaves, trunk, canes and berries. On leaves we will see intervenaial striping looks like tiger strips. White cultivars shows chlorotic and necrotic strips where as red cultivars shows red areas and necrotic strips. On berries we will see superficial spots and later may coalesce making berries appear black. Trunk/arm/cordons shows dark brown black vascular streaking and oozes dark sap when we cut trunk. Some time this measles in associate with numerous secondary wood rotting fungi which decorate the vineyard completely.</p>
+                <h4>Cause</h4>
+                <p>Fungus</p>
+                <h4>Management</h4>
+                <p>Till date there is no effective method to control this disease. Remove the infected berries, leaves and trunk and destroy them. Protect the prune wounds to minimize fungal infection using wound sealant (5% boric acid in acrylic paint) or essential oil or suitable fungicides.</p>
+            </div>
+            <div id="leafblight">
+                <center><h3>Leaf blight (Isariopsis Leaf Spot)</h3></center>
+                <h4>Symptoms</h4>
+                <p>On leaf surface we will see lesions which are irregularly shaped (2 to 25 mm in diameter). Initially lesions are dull red to brown in color turn black later. If disease is severe this lesions may coalesce. On berries we can see symptom similar to black rot but the entire clusters will collapse.</p>
+                <h4>Cause</h4>
+                <p>Fungus</p>
+                <h4>Management</h4>
+                <p>Fungicides sprayed for other diseases in the season may help to reduce this disease.</p>
+            </div>
+            <div id="healthy">
+                <h4>Your plant is HEALTHY</h4>
+                <p>Keep it up!</p>
+            </div>
+        
+    </div>
+    </div>
+</div>
+
+{% endblock %}
